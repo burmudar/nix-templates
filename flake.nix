@@ -23,7 +23,7 @@
 
       templates = {
         basic = {
-          path = "./basic";
+          path = ./basic;
           description = "very basic nix flake template";
         };
       };
