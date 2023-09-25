@@ -18,13 +18,16 @@
 
     in
     {
-
       formatter = forAllSystems (system: nixpkgsFor.${system}.nixpkgs-fmt);
-
       templates = {
         basic = {
           path = ./basic;
           description = "very basic nix flake template";
+	  welcomeText = ''
+	  Provides a basic dev shell with multi systems already setup.
+
+	  edit buildInputs for your projects dependencies
+	  '';
         };
       };
     };
