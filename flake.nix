@@ -19,7 +19,9 @@
     in
     {
       formatter = forAllSystems (system: nixpkgsFor.${system}.nixpkgs-fmt);
-      templates = {
+
+      templates = rec {
+        default = basic;
         basic = {
           path = ./basic;
           description = "very basic nix flake template";
@@ -28,6 +30,10 @@
 
 	  edit buildInputs for your projects dependencies
 	  '';
+        };
+        ocaml = {
+          path = ./ocaml;
+          description = "basic OCaml project template";
         };
       };
     };
