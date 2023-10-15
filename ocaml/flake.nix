@@ -25,9 +25,11 @@
           pkgs = nixpkgsFor.${system};
           ocamlPkgs = pkgs.ocaml-ng.ocamlPackages_5_1;
           baseDeps = with pkgs; [
-
+            dune_3
+            opam
           ];
           deps = with ocamlPkgs; [
+            utop
             ocaml
             ocaml-lsp
           ];
