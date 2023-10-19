@@ -24,7 +24,7 @@
         let
           pkgs = nixpkgsFor.${system};
           baseDeps = with pkgs; [
-          # define dependencies here
+            # define dependencies here
           ];
         in
         {
