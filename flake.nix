@@ -36,6 +36,10 @@
           path = ./rust;
           description = "basic rust project template";
         };
+        terraform = {
+          path = ./terraform;
+          description = "basic terraform project template";
+        };
       };
       formatter = forAllSystems (system: nixpkgsFor.${system}.nixpkgs-fmt);
     };
