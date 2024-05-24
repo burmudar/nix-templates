@@ -32,6 +32,10 @@
           path = ./ocaml;
           description = "basic OCaml project template";
         };
+        rust = {
+          path = ./rust;
+          description = "basic rust project template";
+        };
       };
       formatter = forAllSystems (system: nixpkgsFor.${system}.nixpkgs-fmt);
     };
