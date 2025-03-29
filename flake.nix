@@ -35,10 +35,27 @@
         rust = {
           path = ./rust;
           description = "rust project template";
+          welcomeText = ''
+            	  Provides rust project with crane setup.
+
+            	  Default package is 'app'
+            	  '';
         };
         terraform = {
           path = ./terraform;
           description = "basic terraform project template";
+        };
+        python = {
+          path = ./python;
+          description = "python project template using uv2nix";
+          welcomeText = ''
+            	  Provides python setup using uv2nix.
+
+                Shell has:
+                - uv
+                - ruff
+                - pyright
+            	  '';
         };
       };
       formatter = forAllSystems (system: nixpkgsFor.${system}.nixpkgs-fmt);
