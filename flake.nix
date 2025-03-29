@@ -34,7 +34,7 @@
         };
         rust = {
           path = ./rust;
-          description = "basic rust project template";
+          description = "rust project template";
         };
         terraform = {
           path = ./terraform;
